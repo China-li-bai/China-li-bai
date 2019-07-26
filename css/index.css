@@ -1,0 +1,838 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+body {
+
+    text-align: center;
+    overflow-x: hidden;
+}
+
+body {
+    background: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    touch-action: none
+}
+
+a {
+    color: #FFFFFF
+}
+
+a:hover {
+    color: #4DC9FF
+}
+
+.wrapper {
+    width: 1200px;
+    margin: auto;
+}
+
+.por {
+    position: relative;
+    top: 0;
+    left: 50%;
+    height: 1080px;
+    z-index: inherit;
+    transform: translateX(-50%);
+}
+
+header {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: 1080px;
+    background: url(../images/bankuai1/bg01.png) no-repeat top center;
+    padding-top: 150px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.fix {
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999
+}
+
+.fix ul {
+    display: flex;
+    z-index: 999;
+    justify-content: space-between
+}
+
+header .de {
+    padding-top: 80px;
+}
+
+header .xx {
+    width: 1600px;
+    height: auto;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+
+    animation: xx 1.5s infinite;
+}
+
+
+@keyframes xx {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1)
+    }
+    100% {
+        opacity: 0.5;
+        transform: translateX(-50%) scale(1.1)
+    }
+}
+
+header .e03 img {
+    width: 952px;
+    height: auto;
+    /* position: absolute; */
+    margin: 80px -72px 0 350px;
+}
+
+/*提示向下动作*/
+
+header .arrow_btn {
+    width: 1.5rem;
+    height: 2.2rem;
+    display: block;
+    position: fixed;
+    bottom: 4%;
+    left: 50%;
+
+    -webkit-animation: arrow linear 1s infinite;
+    animation: arrow linear 1s infinite;
+}
+
+header .twoarrow {
+    bottom: 8.2%;
+}
+
+header .twoarrow:before {
+    display: none;
+}
+
+header .twoarrow:after {
+    animation: slide ease 1s .2s infinite;
+}
+
+.arrow_btn:after,
+.arrow_btn:before {
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    left: 0.25rem;
+    content: "";
+    border-top: 3px solid #FFFFFF;
+    border-right: 3px solid #FFFFFF;
+    overflow: hidden;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.arrow_btn:after {
+    bottom: -0.25rem;
+    -webkit-animation: slide ease 1s infinite;
+    animation: slide ease 1s infinite;
+}
+
+.arrow_btn:before {
+    top: 0.25rem;
+    -webkit-animation: slide ease 1s .2s infinite;
+    animation: slide ease 1s .4s infinite;
+}
+
+@-webkit-keyframes slide {
+    20% {
+        opacity: 0.2;
+    }
+    0%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide {
+    20% {
+        opacity: 0.2;
+    }
+    0%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes arrow {
+    50% {
+        -webkit-transform: translate(-0.75rem, -0.15rem);
+    }
+    0%,
+    100% {
+        -webkit-transform: translate(-0.75rem, 0);
+    }
+}
+
+@keyframes arrow {
+    50% {
+        transform: translate(-0.75rem, -0.15rem);
+    }
+    0%,
+    100% {
+        transform: translate(-0.75rem, 0);
+    }
+}
+
+
+/*第一版面结束============================*/
+
+/*第二屏=======================================*/
+.skills {
+    background: url("../images/bankuai2/xx.png") no-repeat top center;
+    perspective: 800px;
+}
+
+.skills .wrapper {
+    position: relative;
+}
+
+.skills .wrapper ul {
+    position: absolute;
+    top: 380px;
+    left: 0;
+}
+
+.skills .wrapper ul img {
+    vertical-align: bottom;
+}
+
+.skills .wrapper li {
+    height: 300px;
+    float: left;
+    width: 25%;
+}
+
+/*云*/
+.skills .wrapper .top {
+    top: 430px;
+    animation: yunmove 3s linear infinite alternate;
+    /*//alternate  往返*/
+
+}
+
+@keyframes yunmove {
+    0% {
+        left: -2%
+    }
+    100% {
+        left: 2%;
+    }
+}
+
+
+.skills .top li {
+    margin-bottom: 50px;
+}
+
+.skills .top li:last-child, .skills .top li:nth-child(7) {
+    margin-top: -10px;
+}
+
+/*字*/
+.skills .bot li {
+    margin-bottom: 50px;
+    transform-style: preserve-3d;
+}
+
+.skills .bot li img:hover {
+    transform-origin:left;
+    /* animation: ziRotateY 1s linear */
+}
+
+@keyframes ziRotateY {
+    0% {
+        transform: rotateY(0)
+    }
+    100% {
+        transform: rotateY(-60deg)
+    }
+}
+
+
+/*第二瓶结束========================*/
+
+
+/*第三屏*/
+.banner {
+    width: 1920px;
+    background: url("../images/bankuai3/bg.png") no-repeat top center;
+}
+
+.tit {
+    padding-top: 50px;
+}
+
+.banner .con {
+    width: 1460px;
+    height: 590px;
+    left: -120px;
+    top: 100px;
+    background: rgba(168, 204, 200, 0.3);
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 45px;
+}
+
+.con img:first-of-type {
+    margin-top: 40px;
+}
+
+.banner .con span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.con .left {
+	outline:none;
+    left: 0;
+}
+
+.con .right {
+	outline:none;
+    right: 0;
+}
+
+.swiper-container {
+    width: 1200px;
+    height: 445px;
+}
+
+.swiper-container img {
+    width: 1200px;
+    height: 445px;
+
+}
+
+
+/*4  icon*/
+.icon {
+    width: 1920px;
+    background: url("../images/bankuai4/bg.png") no-repeat top center;
+    overflow: hidden;
+}
+
+.icon .iconse {
+    width: 1200px;
+    height: 70px;
+    margin: 15px auto 0;
+    line-height: 70px;
+    border-bottom: 2px solid #1dbdfd;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.icon .iconse a {
+    color: #1699cc;
+    font-size: 36px;
+}
+
+.content {
+    margin-top: 50px;
+    width: 1200px;
+    height: 750px;
+    display: flex;
+    justify-content: space-between;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.content li {
+    left: 0;
+    top: 0;
+    width: 1200px;
+    height: 750px;
+    position: absolute;
+}
+
+.content li p {
+    margin-top: 15px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.content li p img {
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+    -webkit-transition: 1.5s;
+
+}
+
+.iconse .color {
+    color: #ff504f;
+}
+
+.content li p img:hover {
+    transform: scale(1.5);
+}
+
+
+/*5APP  start ===========================*/
+/* .apps{
+	background: url(../img/bankuai5/bg.png) no-repeat center top;
+} */
+.apps {
+    width: 100%;
+    height: 1080px;
+    background: url(../images/bankuai5/bg22.png) no-repeat center top;
+}
+
+.apps .phone {
+    position: absolute;
+    left: 51%;
+    top: 84%;
+    transform: translate(-51%, -80%);
+    z-index: 2
+}
+
+.apps .phone img {
+    width: 900px;
+    height: 730px;
+}
+
+.apps .appNav {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 80px;
+    display: inline-flex;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.apps .appNav li {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.act {
+    border: 5px dotted rgb(101, 197, 255)
+}
+
+.apps .appNav img {
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+}
+
+.apps .appContent {
+    width: 100%;
+    position: relative;
+    padding-top: 52px;
+    box-sizing: border-box;
+    height: 810px;
+}
+
+.apps .appContent li {
+    position: absolute;
+    height: 810px;
+
+}
+
+/*.app {*/
+/*position: relative;*/
+/*width: 1200px;*/
+
+/*background: url(../images/bankuai5/bg222.png) no-repeat;*/
+/*!* overflow: hidden; *!*/
+/*}*/
+.cur {
+    width: 1200px;
+    padding-top: 160px;
+    padding-bottom: 100px;
+    height: 550px;
+}
+
+
+.cur .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 530px;
+}
+
+
+/*5APP  end ===========================*/
+
+
+/* web ===================== */
+
+.web {
+    background: url("../images/bankuai6/bg.png") no-repeat top center;
+    position: relative;
+    height: 1080px;
+}
+
+.web .title {
+    padding-top: 30px;
+}
+
+.web .yu {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 500px;
+    z-index: -1;
+}
+
+.web .yu img:nth-of-type(1) {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+
+.web .yu img:nth-of-type(2) {
+    position: absolute;
+    bottom: 0;
+    left: 30%
+}
+
+.web .yu img:nth-of-type(3) {
+    position: absolute;
+    bottom: 0;
+    right: -40%;
+
+}
+
+.bg {
+    background: rgba(144, 228, 255, 0.3);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1400px;
+    height: 890px;
+    z-index: -1;
+}
+
+.bg .yuan {
+    width: 90px;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 100px 0 100px 11px;
+
+}
+
+.bg .yuan img {
+    width: 90px;
+    cursor: pointer;
+}
+
+.bg .yuan img:first-child {
+    margin-top: 100px;
+
+}
+
+.web .main {
+    position: relative;
+    width: 100%;
+}
+
+.web .con {
+    margin-left: 15px;
+    padding-top: 80px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+
+}
+
+.web .con p {
+    overflow: hidden;
+    position: relative;
+}
+
+.web .con a {
+    display: block;
+    text-align: center;
+    width: 380px;
+    height: 730px;
+    line-height: 730px;
+    border-radius: 40px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: -380px;
+    top: 40px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.web .con p:hover a {
+    left: 0;
+    color: rgb(101, 197, 255);
+}
+
+/* <!--web 6======================== end--> */
+
+
+/* <!--c4d 7======================== end--> */
+.c4d {
+    background: url(../images/bankuai7/bg.png) no-repeat top center;
+}
+
+.c4d .title {
+    padding-top: 30px;
+}
+
+.c4d .con {
+    width: 1200px;
+    height: 700px;
+    padding-top: 20px;
+    padding-left: 50px;
+    margin: auto;
+    text-align: center;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2, 50%);
+}
+
+.c4d .con p{
+    width: 300px;
+    height: 300px;
+}
+
+.c4d .con p img{
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+}
+
+
+/* <!--c4d 7======================== end--> */
+
+/* others start */
+/* .others {
+    width: 100%;
+    height: 1080px;
+
+    background: url(../images/bankuai9/bg.png) no-repeat top center;
+}
+
+.others .title {
+    padding-top: 30px;
+}
+
+.others .wrapper {
+    position: relative;
+}
+
+.others .otherss {
+    width: 340px;
+    height: 490px;
+    left: 457px;
+    top: 387px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg);
+    animation: zhuan 20s linear infinite;
+}
+
+@keyframes zhuan {
+    from {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+}
+
+.otherss li {
+    width: 250px;
+    height: 375px;
+    border: 20px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.otherss li img {
+    width: 250px;
+}
+
+.otherss li:nth-of-type(1) {
+    transform: rotateY(36deg) translateZ(600px);
+}
+
+.otherss li:nth-of-type(2) {
+    transform: rotateY(72deg) translateZ(600px);
+}
+
+.otherss li:nth-of-type(3) {
+    transform: rotateY(108deg) translateZ(600px);
+}
+
+.otherss li:nth-of-type(4) {
+    transform: rotateY(144deg) translateZ(600px);
+}
+
+.otherss li:nth-of-type(5) {
+    transform: rotateY(180deg) translateZ(600px);
+}
+
+.otherss li:nth-of-type(6) {
+    transform: rotateY(216deg) translateZ(600px);
+}
+
+.otherss li:nth-of-type(7) {
+    transform: rotateY(252deg) translateZ(600px);
+}
+
+.otherss li:nth-of-type(8) {
+    transform: rotateY(288deg) translateZ(600px);
+}
+
+.otherss li:nth-of-type(9) {
+    transform: rotateY(324deg) translateZ(600px);
+}
+
+.otherss li:nth-of-type(10) {
+    transform: rotateY(360deg) translateZ(600px);
+}
+
+
+/* 鼠标移上ul设置动画暂停 */
+/* ul:hover {
+    animation-play-state: paused;
+}
+/* others end */
+/* footer */
+.footer {
+    background: url("../images/bankuai8/bg.png") no-repeat top center;
+    position: relative;
+    height: 1080px;
+}
+.footer .wrapper {
+    position: relative
+}
+
+.footer .cao {
+    /*background: url("../images/bankuai8/cao1.png");*/
+    width: 1920px;
+    height: 390px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(100%);
+    bottom: 0;
+    animation: caogo 5s infinite alternate;
+}
+
+.footer .cao img{
+    width: 1980px;}
+
+
+    /* .footer .bg{width: 1200px;bottom:100px;} */
+.footer .con {
+    width: 1230px;
+    height: 781px;
+    background: rgba(186, 237, 255, 0.6);
+    position: absolute;
+    left: 0;
+    top: 122px;
+    /*animation: caogo 5s infinite ;*/
+}
+
+@keyframes caogo {
+    0% {
+        left: -0.5%;
+    }
+    100% {
+        left: 0.5%
+    }
+}
+
+.footer .xmnl {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: 6%;
+    top: 10%;
+}
+
+.footer .zydz {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: 49%;
+    top: 30%;
+}
+
+.footer .lianxi {
+    position: absolute;
+    bottom: 23%;
+    padding: 0 80px;
+    box-sizing: border-box;
+    width: 1200px;
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .lianxi div {
+    width: 220px;
+}
+
+.footer .lianxi img {
+    cursor: pointer;
+}
+
+.footer .lianxi p {
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #8cd2ed;
+    border-radius: 10px;
+    font-size: 22px;
+    padding: 0 5px;
+    /* display: none; */
+}
+
+.footer .lianxi .wenzi {
+    font-size: 18px;
+}
+
